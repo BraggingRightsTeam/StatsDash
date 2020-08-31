@@ -18,11 +18,10 @@ function Navigation() {
     const history = useHistory();
     function handleOnclick(event){
         event.preventDefault();
-        return app.auth().signOut().then(()=>{
+        app.auth().signOut().then(()=>{
             alert("OK we're signing you out.");
             console.log("HELLO");
             console.log(currentUser);
-            history.push("/");
         });
 
      
@@ -37,7 +36,7 @@ function Navigation() {
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mr-auto">
                         <Nav.Link href="/myhome">My Home</Nav.Link>
-                        <Nav.Link href="/dashboard">Dashboard</Nav.Link>
+                        {/* <Nav.Link href="/dashboard">Dashboard</Nav.Link> */}
                         <Nav.Link href="/newplayer">New Player</Nav.Link>
                         <Nav.Link href="/newtournament">New Tournament</Nav.Link>
                         <Nav.Link href="/new/friends">Add Friends</Nav.Link>
